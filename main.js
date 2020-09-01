@@ -21,7 +21,7 @@ lightning as it courses through you, enhanced by the fruit juice covered hand yo
 
 */
 confirm("Choose your adventure")
-let death = true
+let isDead = false
 
 var answer = prompt(
   "Your nose has been stuffy all day, your getting a headache, and a friend tells you, online, to take a break outside do you _1_ listen or _2_ sleep"
@@ -32,39 +32,41 @@ if (answer == 1) {
     "Lucky you, you escape a deadly carbon monoxide leak and thank your friend."
   )
 } else {
-  death == true
   alert(
     "You rest, having already been sleepy, and let the darkness envelop your mind...but you do not wake up"
   )
+  isDead = true
 }
 
-var answer = prompt(
-  "Realizing your luck in deciding to listen to your friend , you wonder what to do next. _1_Call the gas company or _2_ decide you have done enough, I mean, you left a window open?"
-)
-
-if (answer == 1) {
-  alert(
-    "The gas company shows up, and informs you that, had you not called, the entire block could have blown due to a gas bublle in the ground. GOOD JOB!"
+if (isDead == false) {
+  var answer = prompt(
+    "Realizing your luck in deciding to listen to your friend , you wonder what to do next. _1_Call the gas company or _2_ decide you have done enough, I mean, you left a window open?"
   )
-} else {
-  death = true
-  alert(
-    "Finding a sense of accomplishment, you start to walk to a friends house...until you hear the boom. The next time you look up, you are telling the judge, 'but... I opened the window'"
-  )
+  if (answer == 1) {
+    alert(
+      "The gas company shows up, and informs you that, had you not called, the entire block could have blown due to a gas bublle in the ground. GOOD JOB!"
+    )
+  } else {
+    alert(
+      "Finding a sense of accomplishment, you start to walk to a friends house...until you hear the boom. The next time you look up, you are telling the judge, 'but... I opened the window'"
+    )
+    isDead = true
+  }
 }
 
-var answer = prompt(
-  "Mulling over your unprecedented day, you decide it's time for a treat. _1_stick with healthy choices, grab some fruit and go on a walk or _2_go get a greasy burger, and risk a heart attack?",
-  ""
-)
+if (isDead == false) {
+  var answer = prompt(
+    "Mulling over your unprecedented day, you decide it's time for a treat. _1_stick with healthy choices, grab some fruit and go on a walk or _2_go get a greasy burger, and risk a heart attack?",
+    ""
+  )
 
-if (answer == 2) {
-  alert(
-    "On your walk to the nearest Karl's jr., and you run into a long lost sibling. They have diabettes, so you decide to go to sweet tomatoes, and find out this person can lead you to your dream job. It's gonna be a good life."
-  )
-} else {
-  death = true
-  alert(
-    "your walking feeling great, walking through beautiful open fields. as a thunderous roar pounds overhead, and you realize you never checked the weather... you are struck through by lightning as it courses through you, enhanced by the fruit juice covered hand you raised to defend yourself. Your luck has ended, you are dead."
-  )
+  if (answer == 2) {
+    alert(
+      "On your walk to the nearest Karl's jr., and you run into a long lost sibling. They have diabettes, so you decide to go to sweet tomatoes, and find out this person can lead you to your dream job. It's gonna be a good life."
+    )
+  } else {
+    alert(
+      "your walking feeling great, walking through beautiful open fields. as a thunderous roar pounds overhead, and you realize you never checked the weather... you are struck through by lightning as it courses through you, enhanced by the fruit juice covered hand you raised to defend yourself. Your luck has ended, you are dead."
+    )
+  }
 }
